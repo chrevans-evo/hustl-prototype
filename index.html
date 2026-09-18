@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hustl prototype</title>
+<meta name="description" content="Clickable prototype of Hustl, a job-booking app for teens on Sydney's Northern Beaches.">
+<meta name="theme-color" content="#E9E4FB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236D28D9'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='20' fill='%23FFFFFF'%3Eh%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stage">
+  <aside class="panel">
+    <div class="panel-brand">hustl<span>✦</span> <small>prototype</small></div>
+    <p class="panel-blurb">A job-booking app for teens aged 13 to 17 on Sydney's Northern Beaches. Tap through the phone. Every button works.</p>
+    <div class="panel-group">
+      <div class="panel-title">Teen flow</div>
+      <a href="#/">1 Welcome</a>
+      <a href="#/signup">2 Sign up + parent consent</a>
+      <a href="#/browse">3 Browse jobs</a>
+      <a href="#/task/1">4 Job details + offer</a>
+      <a href="#/jobs">5 My jobs (timeline)</a>
+      <a href="#/rate">6 Rate the poster</a>
+      <a href="#/earnings">7 Money jars</a>
+      <a href="#/profile">8 Profile + trust ring</a>
+    </div>
+    <div class="panel-group">
+      <div class="panel-title">Poster flow</div>
+      <a href="#/post">9 Post a job</a>
+      <a href="#/applicants">10 Choose a teen</a>
+    </div>
+    <button type="button" class="panel-reset" data-action="reset">Reset prototype</button>
+  </aside>
+  <main class="phone" id="app" aria-live="polite"></main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
