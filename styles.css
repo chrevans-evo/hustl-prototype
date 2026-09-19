@@ -1,4 +1,4 @@
-/* Hustl prototype — "Soft OS" design direction */
+/* Hustl prototype, "Circles" concept, Soft OS design direction */
 :root{
   --ink:#2A2440;--sec:#5C5680;--body:#3C3660;
   --violet:#6D28D9;--violet2:#8B5CF6;--lav:#EDE9FE;--lav2:#DCD6F2;
@@ -154,3 +154,22 @@ textarea.input{padding:14px 16px;resize:none;line-height:1.5;font-weight:500}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
 .pop{animation:pop .4s cubic-bezier(.32,.72,0,1)}
+
+/* Circles additions */
+.orbit{position:relative;height:240px;flex-shrink:0}
+.orbit-line{position:absolute;left:58px;top:28px;width:184px;height:184px;border-radius:50%;border:2px dashed rgba(109,40,217,.25)}
+.orb{position:absolute;width:42px;height:42px;font-size:12px;box-shadow:var(--sh-card);animation:pop .5s cubic-bezier(.32,.72,0,1) both}
+.stack{display:flex;flex-shrink:0}
+.stack .avatar{border:2px solid #fff;margin-left:-8px;box-shadow:var(--sh-card)}
+.stack .avatar:first-child{margin-left:0}
+.stack .more{background:var(--ink);color:#fff}
+.kind{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px;border:2px solid transparent;border-radius:18px;background:var(--glass);box-shadow:var(--sh-card);font-weight:700;font-size:13px;cursor:pointer;text-align:left;min-height:76px}
+.kind.on{border-color:var(--violet);background:#fff}
+.kind.on .ico{color:var(--violet)}
+.rule{display:flex;gap:12px;align-items:flex-start;padding:14px;border:2px solid transparent;cursor:pointer;text-align:left;width:100%}
+.rule.on{border-color:var(--violet);background:#fff}
+.radio{width:20px;height:20px;border-radius:50%;border:2px solid rgba(42,36,64,.25);flex-shrink:0;margin-top:1px}
+.rule.on .radio{border:6px solid var(--violet)}
+.code{flex:1;min-height:48px;display:flex;align-items:center;padding:0 16px;border-radius:14px;background:var(--lav);color:var(--violet);font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:16px;letter-spacing:.1em}
+.vouch{display:flex;align-items:center;gap:8px;font-size:12px;line-height:1.4;color:var(--body);background:var(--mint);color:var(--mintdark);border-radius:14px;padding:8px 12px}
+.dotbadge{position:absolute;top:6px;right:12px;min-width:18px;height:18px;border-radius:999px;background:var(--amber);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 5px}
