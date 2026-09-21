@@ -52,21 +52,38 @@
     tech: { label: 'Tech help', icon: 'phone', tint: '#FDE8D8' }
   };
   var TASKS = [
-    { id: 1, cat: 'car', title: 'Wash and vacuum two cars', pay: 40, suburb: 'Collaroy', km: '1.2', walk: '15 min walk', when: 'Sat 10am', longWhen: 'Sat 10:00am', dur: 'about 1.5 hrs', rate: '$27/hr', poster: 'Jenny M.', init: 'JM', tint: '#FDE8D8', rating: '4.9', jobs: 23, chips: [['Car wash', 'lav'], ['Gear provided', 'mint']], desc: 'Two cars in the driveway, a Kia and a Subaru. Outside wash, wheels, and a quick vacuum inside. Hose, bucket and vacuum are all here. I’ll be home the whole time.', px: 300, py: 110, weekend: true },
-    { id: 2, cat: 'garden', title: 'Mow the front lawn and edges', pay: 35, suburb: 'Dee Why', km: '0.8', walk: '6 min walk', when: 'Sun 9am', longWhen: 'Sun 9:00am', dur: 'about 1 hr', rate: '$35/hr', poster: 'Raj P.', init: 'RP', tint: '#D6F2E7', rating: '5.0', jobs: 9, chips: [['Lawn and garden', 'lav'], ['Mower provided', 'mint']], desc: 'Small front lawn, about 15 minutes of mowing plus edges along the path. I’ll show you the mower. Closed shoes please.', px: 90, py: 90, weekend: true },
-    { id: 3, cat: 'dog', title: 'Walk Biscuit the retriever', pay: 20, suburb: 'Freshwater', km: '2.4', walk: '25 min walk', when: '4pm', longWhen: 'Weekdays 4:00pm', dur: '45 min', rate: '$27/hr', poster: 'Sam K.', init: 'SK', tint: '#EDE9FE', rating: '4.8', jobs: 31, chips: [['Dog walking', 'lav'], ['Ongoing', 'mint']], desc: 'Biscuit is 4, friendly and pulls a little at the start. A loop to the beach and back is perfect. Send a photo from the walk if you can.', px: 150, py: 280, weekend: false },
-    { id: 4, cat: 'box', title: 'Help clear out the garage', pay: 60, suburb: 'Mona Vale', km: '6.1', walk: '12 min ride', when: 'Sat 1pm', longWhen: 'Sat 1:00pm', dur: 'about 3 hrs', rate: '$20/hr', poster: 'Liz and Tom H.', init: 'LT', tint: '#FDE8D8', rating: '4.7', jobs: 9, chips: [['Garage + moving', 'lav'], ['2-player OK', 'mint']], desc: 'Carry boxes to a skip, sort keep vs chuck piles, sweep out. Gloves provided. Bring a mate and split a bonus $20.', px: 230, py: 170, weekend: true },
-    { id: 5, cat: 'clean', title: 'Wash the ground floor windows', pay: 45, suburb: 'Narrabeen', km: '3.5', walk: '8 min ride', when: 'Sun 2pm', longWhen: 'Sun 2:00pm', dur: 'about 2 hrs', rate: '$22/hr', poster: 'Priya N.', init: 'PN', tint: '#D6F2E7', rating: '4.9', jobs: 14, chips: [['Cleaning', 'lav'], ['No ladders', 'mint']], desc: 'Eight windows around the house, outside only. All reachable from the ground. Squeegee and bucket here.', px: 40, py: 220, weekend: true },
-    { id: 6, cat: 'tech', title: 'Set up Grandad’s new phone', pay: 25, suburb: 'Curl Curl', km: '1.9', walk: '20 min walk', when: 'Any arvo', longWhen: 'Any afternoon this week', dur: 'about 1 hr', rate: '$25/hr', poster: 'Margaret W.', init: 'MW', tint: '#EDE9FE', rating: '5.0', jobs: 4, chips: [['Tech help', 'lav'], ['Indoors, adult home', 'mint']], desc: 'Move contacts and photos from the old phone, set up WhatsApp and show him how to video call the grandkids.', px: 320, py: 250, weekend: false }
+    { id: 1, circle: 'curl', rel: 'Ava’s mum', invitedBy: 'Kate (your mum)', joined: 'March', cat: 'car', title: 'Wash and vacuum two cars', pay: 40, suburb: 'Collaroy', km: '1.2', walk: '15 min walk', when: 'Sat 10am', longWhen: 'Sat 10:00am', dur: 'about 1.5 hrs', rate: '$27/hr', poster: 'Jenny M.', init: 'JM', tint: '#FDE8D8', rating: '4.9', jobs: 23, chips: [['Car wash', 'lav'], ['Gear provided', 'mint']], desc: 'Two cars in the driveway, a Kia and a Subaru. Outside wash, wheels, and a quick vacuum inside. Hose, bucket and vacuum are all here. I’ll be home the whole time.', px: 300, py: 110, weekend: true },
+    { id: 2, circle: 'curl', rel: 'Dev’s dad', invitedBy: 'Kate (your mum)', joined: 'March', cat: 'garden', title: 'Mow the front lawn and edges', pay: 35, suburb: 'Dee Why', km: '0.8', walk: '6 min walk', when: 'Sun 9am', longWhen: 'Sun 9:00am', dur: 'about 1 hr', rate: '$35/hr', poster: 'Raj P.', init: 'RP', tint: '#D6F2E7', rating: '5.0', jobs: 9, chips: [['Lawn and garden', 'lav'], ['Mower provided', 'mint']], desc: 'Small front lawn, about 15 minutes of mowing plus edges along the path. I’ll show you the mower. Closed shoes please.', px: 90, py: 90, weekend: true },
+    { id: 3, circle: 'curl', rel: 'Biscuit’s owner at no. 14', invitedBy: 'Jenny M.', joined: 'April', cat: 'dog', title: 'Walk Biscuit the retriever', pay: 20, suburb: 'Freshwater', km: '2.4', walk: '25 min walk', when: '4pm', longWhen: 'Weekdays 4:00pm', dur: '45 min', rate: '$27/hr', poster: 'Sam K.', init: 'SK', tint: '#EDE9FE', rating: '4.8', jobs: 31, chips: [['Dog walking', 'lav'], ['Ongoing', 'mint']], desc: 'Biscuit is 4, friendly and pulls a little at the start. A loop to the beach and back is perfect. Send a photo from the walk if you can.', px: 150, py: 280, weekend: false },
+    { id: 4, circle: 'y10', rel: 'Jack’s parents', invitedBy: 'started the circle', joined: 'July', cat: 'box', title: 'Help clear out the garage', pay: 60, suburb: 'Mona Vale', km: '6.1', walk: '12 min ride', when: 'Sat 1pm', longWhen: 'Sat 1:00pm', dur: 'about 3 hrs', rate: '$20/hr', poster: 'Liz and Tom H.', init: 'LT', tint: '#FDE8D8', rating: '4.7', jobs: 9, chips: [['Garage + moving', 'lav'], ['2-player OK', 'mint']], desc: 'Carry boxes to a skip, sort keep vs chuck piles, sweep out. Gloves provided. Bring a mate and split a bonus $20.', px: 230, py: 170, weekend: true },
+    { id: 5, circle: 'y10', rel: 'Mia’s mum', invitedBy: 'Liz H.', joined: 'July', cat: 'clean', title: 'Wash the ground floor windows', pay: 45, suburb: 'Narrabeen', km: '3.5', walk: '8 min ride', when: 'Sun 2pm', longWhen: 'Sun 2:00pm', dur: 'about 2 hrs', rate: '$22/hr', poster: 'Priya N.', init: 'PN', tint: '#D6F2E7', rating: '4.9', jobs: 14, chips: [['Cleaning', 'lav'], ['No ladders', 'mint']], desc: 'Eight windows around the house, outside only. All reachable from the ground. Squeegee and bucket here.', px: 40, py: 220, weekend: true },
+    { id: 6, circle: 'curl', rel: 'Raj’s mum', invitedBy: 'Raj P.', joined: 'May', cat: 'tech', title: 'Set up Grandad’s new phone', pay: 25, suburb: 'Curl Curl', km: '1.9', walk: '20 min walk', when: 'Any arvo', longWhen: 'Any afternoon this week', dur: 'about 1 hr', rate: '$25/hr', poster: 'Margaret W.', init: 'MW', tint: '#EDE9FE', rating: '5.0', jobs: 4, chips: [['Tech help', 'lav'], ['Indoors, adult home', 'mint']], desc: 'Move contacts and photos from the old phone, set up WhatsApp and show him how to video call the grandkids.', px: 320, py: 250, weekend: false }
   ];
+  var CIRCLES = [
+    { id: 'curl', name: 'Curl Curl Crew', code: 'CURL-2481', families: 6, kids: 9, admin: 'Kate L.', adminRel: 'your mum', since: 'March', members: [
+      { init: 'KL', name: 'Kate L.', rel: 'Your mum', role: 'Started the circle', tint: '#D6F2E7' },
+      { init: 'JM', name: 'Jenny M.', rel: 'Ava’s mum', role: 'Invited by Kate', tint: '#FDE8D8' },
+      { init: 'RP', name: 'Raj P.', rel: 'Dev’s dad', role: 'Invited by Kate', tint: '#EDE9FE' },
+      { init: 'SK', name: 'Sam K.', rel: 'Biscuit’s owner at no. 14', role: 'Invited by Jenny', tint: '#D6F2E7' },
+      { init: 'MW', name: 'Margaret W.', rel: 'Raj’s mum', role: 'Invited by Raj', tint: '#FDE8D8' }
+    ], teens: ['Zoe L. (you)', 'Ava M.', 'Dev P.', 'Ollie P.', 'Ruby K.'] },
+    { id: 'y10', name: 'Year 10 parents, Cromer', code: 'CRMR-1093', families: 14, kids: 16, admin: 'Liz H.', adminRel: 'Jack’s mum', since: 'July', members: [
+      { init: 'LT', name: 'Liz and Tom H.', rel: 'Jack’s parents', role: 'Started the circle', tint: '#FDE8D8' },
+      { init: 'PN', name: 'Priya N.', rel: 'Mia’s mum', role: 'Invited by Liz', tint: '#EDE9FE' },
+      { init: 'AB', name: 'Alicia B.', rel: 'Noah’s mum', role: 'Invited by Liz', tint: '#D6F2E7' },
+      { init: 'DR', name: 'Dave R.', rel: 'Ella’s dad', role: 'Invited by Priya', tint: '#FDE8D8' },
+      { init: 'KL', name: 'Kate L.', rel: 'Your mum', role: 'Invited by Liz', tint: '#D6F2E7' }
+    ], teens: ['Zoe L. (you)', 'Jack H.', 'Mia N.', 'Noah B.', 'Ella R.'] }
+  ];
+  function circleOf(id) { return CIRCLES.filter(function (c) { return c.id === id; })[0]; }
   var PEOPLE = [
-    { id: 1, name: 'Zoe L.', first: 'Zoe', init: 'ZL', tint: '#EDE9FE', meta: '16, Dee Why · 12 jobs · 1.2 km', rating: '4.9', badge: 'Car wash pro', cls: 'tag-lav', msg: 'Hi Jenny, I can do 10am Saturday. I’ve done 5 car washes on Hustl, happy to bring my own microfibre cloths.' },
-    { id: 2, name: 'Jack T.', first: 'Jack', init: 'JT', tint: '#FDE8D8', meta: '16, Collaroy · 8 jobs · 0.4 km', rating: '4.7', badge: 'Lives nearby', cls: 'tag-mint', msg: 'Can be there at 10 sharp, I’m just up the road.' },
-    { id: 3, name: 'Mia R.', first: 'Mia', init: 'MR', tint: '#D6F2E7', meta: '14, Narrabeen · 3 jobs · 3.1 km', rating: '5.0', badge: 'New and keen', cls: 'tag-peach', msg: 'I’d love to help. My mum can drop me off at 10am.' }
+    { id: 1, name: 'Zoe L.', first: 'Zoe', init: 'ZL', tint: '#EDE9FE', meta: '16 · Kate L.’s daughter · 12 jobs · 1.2 km', rating: '4.9', badge: 'Car wash pro', cls: 'tag-lav', msg: 'Hi Jenny, I can do 10am Saturday. I’ve done 5 car washes on Hustl, happy to bring my own microfibre cloths.' },
+    { id: 2, name: 'Jack T.', first: 'Jack', init: 'JT', tint: '#FDE8D8', meta: '16 · Liz H.’s son · 8 jobs · 0.4 km', rating: '4.7', badge: 'Lives nearby', cls: 'tag-mint', msg: 'Can be there at 10 sharp, I’m just up the road.' },
+    { id: 3, name: 'Mia R.', first: 'Mia', init: 'MR', tint: '#D6F2E7', meta: '14 · Priya N.’s daughter · 3 jobs · 3.1 km', rating: '5.0', badge: 'New and keen', cls: 'tag-peach', msg: 'I’d love to help. My mum can drop me off at 10am.' }
   ];
 
   // ---------- State ----------
-  var KEY = 'hustl-softos-v1';
+  var KEY = 'hustl-circles-v1';
   function fresh() {
     return {
       name: 'Zoe', age: 16, step: 1,
@@ -75,16 +92,17 @@
       saved: {},
       tab: 'up', checkedOut: false, rated: false, rating: 0, tags: {},
       cashout: false, jars: { guitar: 180, trip: 60 }, jarSheet: false,
-      postCat: 'car', pay: 40, posted: false, chosen: null
+      postCat: 'car', pay: 40, posted: false, chosen: null,
+      circle: 'all', postCircles: { curl: true, y10: false }, approvedBy: {}, requests: {}, copied: false
     };
   }
   var S;
-  try { S = JSON.parse(localStorage.getItem(KEY)) || fresh(); } catch (e) { S = fresh(); }
+  try { S = Object.assign(fresh(), JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { S = fresh(); }
   var sheetFor = null;
   var APPROVE_MS = 6000;
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   function set(patch) { Object.keys(patch).forEach(function (k) { S[k] = patch[k]; }); save(); render(); }
-  function approved(id) { var a = S.applied[id]; return !!a && (Date.now() - a.at) > APPROVE_MS; }
+  function approved(id) { var a = S.applied[id]; return !!a && (S.approvedBy[id] || (Date.now() - a.at) > APPROVE_MS); }
   function anyPending() { return Object.keys(S.applied).some(function (id) { return !approved(id); }); }
 
   // ---------- Shared pieces ----------
@@ -112,7 +130,7 @@
   }
   function jobCard(t, on) {
     return '<a href="#/task/' + t.id + '" class="jobcard' + (on ? ' on' : '') + '" id="job-' + t.id + '">' + tile(t.cat, 52, 24) +
-      '<div style="flex:1;min-width:0"><div class="h" style="font-size:14px">' + t.title + '</div><div class="sec" style="font-size:12px;margin-top:2px">' + t.suburb + ' · ' + t.walk + ' · ' + t.when + '</div></div>' +
+      '<div style="flex:1;min-width:0"><div class="h" style="font-size:14px">' + t.title + '</div><div class="sec" style="font-size:12px;margin-top:2px">' + t.suburb + ' · ' + t.walk + ' · ' + t.when + '</div><div style="font-size:11px;margin-top:3px;display:flex;gap:5px;align-items:center"><span class="grn" style="font-size:9px">&#9679;</span><span class="sec">' + t.poster + ', ' + t.rel + ' · ' + circleOf(t.circle).name + '</span></div></div>' +
       '<div class="h vio" style="font-size:19px">$' + t.pay + '</div></a>';
   }
   function statusText(t) {
@@ -127,12 +145,12 @@
   screens.welcome = function () {
     var pins = '<b style="left:40px;top:392px">DEE WHY</b><b style="left:270px;top:330px">COLLAROY</b><button class="pin" style="left:60px;top:330px" tabindex="-1" aria-hidden="true">$35</button><button class="pin on" style="left:190px;top:300px" tabindex="-1" aria-hidden="true">$60</button><button class="pin" style="left:300px;top:380px" tabindex="-1" aria-hidden="true">$40</button><button class="pin" style="left:140px;top:420px" tabindex="-1" aria-hidden="true">$20</button><button class="pin" style="left:250px;top:460px" tabindex="-1" aria-hidden="true">$45</button>';
     return '<div class="screen">' + mapLines(pins, true) +
-      '<div style="position:relative;padding:24px 20px;display:flex;align-items:center;justify-content:space-between"><div class="pill-glass" style="font-size:15px;font-weight:800;padding:10px 16px">hustl ✦</div><div class="pill-glass">' + ico('pin', 14, 'color:#6D28D9') + 'Northern Beaches</div></div>' +
-      '<div style="position:relative;padding:16px 24px 0"><h1 class="h" style="margin:0;font-size:38px;line-height:1.05;letter-spacing:-.02em">Paid jobs a short walk from home.</h1><p class="body" style="margin:12px 0 0;font-size:14px;line-height:1.55">Wash cars, mow lawns, walk dogs. Your parent approves every booking, your money lands in jars you’re saving for.</p></div>' +
+      '<div style="position:relative;padding:24px 20px;display:flex;align-items:center;justify-content:space-between"><div class="pill-glass" style="font-size:15px;font-weight:800;padding:10px 16px">hustl \u2726</div><div class="pill-glass">' + ico('pin', 14, 'color:#6D28D9') + 'Northern Beaches</div></div>' +
+      '<div style="position:relative;padding:16px 24px 0"><h1 class="h" style="margin:0;font-size:36px;line-height:1.05;letter-spacing:-.02em">Jobs from adults your parents already know.</h1><p class="body" style="margin:12px 0 0;font-size:14px;line-height:1.55">Parents set up a circle with families they trust. Teens only ever see jobs posted inside it. No strangers, ever.</p></div>' +
       '<div style="position:relative;margin-top:auto;padding:0 20px 24px;display:flex;flex-direction:column;gap:10px">' +
-      '<div class="glass" style="padding:14px 16px;display:flex;align-items:center;gap:12px"><div class="avatar" style="width:40px;height:40px;border:3px solid #047857;color:#047857;font-size:12px">M</div><div style="flex:1;font-size:12px;line-height:1.5;color:#3C3660"><strong>Parent trust ring built in.</strong> Mum links once, then sees every booking and payout.</div></div>' +
-      '<a href="#/signup" class="btn-ink" style="justify-content:space-between;padding:0 22px"><span>I’m 13 to 17 and want to earn</span>' + ico('chev', 22) + '</a>' +
-      '<a href="#/post" class="btn-glass" style="justify-content:space-between;padding:0 22px"><span>I need a hand with a job</span>' + ico('chev', 22) + '</a></div></div>';
+      '<div class="glass" style="padding:14px 16px;display:flex;align-items:center;gap:12px"><div style="display:flex"><div class="avatar" style="width:34px;height:34px;background:#D6F2E7;font-size:11px;border:2px solid #fff">KL</div><div class="avatar" style="width:34px;height:34px;background:#FDE8D8;font-size:11px;border:2px solid #fff;margin-left:-10px">JM</div><div class="avatar" style="width:34px;height:34px;background:#EDE9FE;font-size:11px;border:2px solid #fff;margin-left:-10px">RP</div></div><div style="flex:1;font-size:12px;line-height:1.5;color:#3C3660"><strong>How a circle works.</strong> One parent starts it, invites parents they know, and each links their own kids.</div></div>' +
+      '<a href="#/parent" class="btn-ink" style="justify-content:space-between;padding:0 22px"><span>I\u2019m a parent: set up or run a circle</span>' + ico('chev', 22) + '</a>' +
+      '<a href="#/signup" class="btn-glass" style="justify-content:space-between;padding:0 22px"><span>I\u2019m 13 to 17: join with my parent\u2019s code</span>' + ico('chev', 22) + '</a></div></div>';
   };
 
   screens.signup = function () {
@@ -152,44 +170,49 @@
     } else if (step === 2) {
       function tog(label, on, first) { return '<label class="row" style="min-height:54px;justify-content:space-between;cursor:pointer;' + (first ? '' : 'border-top:1.5px solid rgba(42,36,64,.1)') + '"><span style="font-weight:600;font-size:14px">' + label + '</span><input class="check" type="checkbox"' + (on ? ' checked' : '') + '></label>'; }
       body = '<div class="scroll" style="padding:12px 20px 20px;display:flex;flex-direction:column;gap:16px">' +
-        '<div><h1 class="h" style="margin:0 0 6px;font-size:28px;line-height:1.1">Link a parent or guardian</h1><p class="sec" style="margin:0;font-size:13px;line-height:1.5">They get a link to approve your account and connect a bank account for payouts. Every booking pings them.</p></div>' +
-        '<div><label class="label" for="pemail">Their email</label><input id="pemail" class="input" type="email" value="kate.lawson@email.com"></div>' +
-        '<div><label class="label" for="pphone">Their mobile</label><input id="pphone" class="input" type="tel" placeholder="04xx xxx xxx"></div>' +
+        '<div><h1 class="h" style="margin:0 0 6px;font-size:28px;line-height:1.1">Your parent’s circle code</h1><p class="sec" style="margin:0;font-size:13px;line-height:1.5">Your mum or dad got a code when they joined a circle. It links you to them and to every family they trust. That circle is the only place you’ll see jobs.</p></div>' +
+        '<div><label class="label" for="ccode">Circle code</label><input id="ccode" class="input" type="text" value="CURL-2481" style="font-weight:800;letter-spacing:.08em"></div>' +
+        '<div class="glass" style="padding:12px 14px;display:flex;align-items:center;gap:12px"><div class="avatar" style="width:40px;height:40px;background:#D6F2E7;font-size:12px">KL</div><div style="flex:1"><div class="h" style="font-size:14px">Curl Curl Crew</div><div class="sec" style="font-size:12px">Started by Kate L. · 6 families · 9 kids</div></div><span class="tag tag-mint">Found ✓</span></div>' +
+        '<div><label class="label" for="pemail">Parent’s email, to confirm it’s you</label><input id="pemail" class="input" type="email" value="kate.lawson@email.com"></div>' +
         '<div class="glass" style="padding:4px 16px">' + tog('Parent sees my bookings', true, true) + tog('Share live location during a job', true) + tog('Parent gets a copy of messages', false) + '</div></div>' +
-        '<div style="padding:12px 20px 24px;display:flex;gap:10px"><button type="button" class="btn-glass" style="flex:0 0 100px" data-action="step" data-value="1">Back</button><button type="button" class="btn-ink" style="flex:1" data-action="step" data-value="3">Send the link</button></div>';
+        '<div style="padding:12px 20px 24px;display:flex;gap:10px"><button type="button" class="btn-glass" style="flex:0 0 100px" data-action="step" data-value="1">Back</button><button type="button" class="btn-ink" style="flex:1" data-action="step" data-value="3">Ask Mum to approve</button></div>';
     } else {
       body = '<div class="scroll" style="padding:30px 24px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">' +
         '<div class="ring pop" style="margin-top:20px"><div class="arc" style="background:conic-gradient(#047857 0 25%,rgba(42,36,64,.1) 25% 100%)"></div><div class="disc">' + S.name.slice(0, 1).toUpperCase() + 'L</div><div class="badge">' + ico('check', 12, 'stroke-width:3') + '</div></div>' +
         '<h1 class="h" style="margin:0;font-size:30px;line-height:1.1">You’re in, ' + S.name + '</h1>' +
-        '<p class="sec" style="margin:0;font-size:13px;line-height:1.55">Link sent to kate.lawson@email.com. Browse jobs now. Offers go live the moment she approves your account.</p>' +
-        '<div class="glass" style="width:100%;padding:14px;display:flex;gap:12px;align-items:center;text-align:left"><div class="tile" style="width:46px;height:46px;background:#EDE9FE">' + ico('spark', 22, 'color:#6D28D9') + '</div><div><div class="h" style="font-size:14px">Trust ring: 25%</div><div class="sec" style="font-size:12px">Parent link done. Finish 3 jobs and get 3 reviews to fill it.</div></div></div></div>' +
+        '<p class="sec" style="margin:0;font-size:13px;line-height:1.55">Kate just got a ping to approve you into Curl Curl Crew. Browse now. Offers go live the moment she taps yes.</p>' +
+        '<div class="glass" style="width:100%;padding:14px;display:flex;gap:12px;align-items:center;text-align:left"><div class="tile" style="width:46px;height:46px;background:#EDE9FE">' + ico('spark', 22, 'color:#6D28D9') + '</div><div><div class="h" style="font-size:14px">Your circle: Curl Curl Crew</div><div class="sec" style="font-size:12px">5 adults your mum knows can post jobs to you. Nobody else can.</div></div></div></div>' +
         '<div style="padding:12px 20px 24px"><a href="#/browse" class="btn-ink">See jobs near you ' + ico('chev', 20) + '</a></div>';
     }
     return '<div class="screen">' + head + body + '</div>';
   };
 
   screens.browse = function () {
-    var f = S.filter;
+    var f = S.filter, c = S.circle;
     var list = TASKS.filter(function (t) {
+      if (c !== 'all' && t.circle !== c) return false;
       if (f === 'walk') return parseFloat(t.km) <= 2.5;
       if (f === 'weekend') return t.weekend;
       if (f === 'pay') return t.pay >= 30;
       return true;
     });
-    var pins = TASKS.map(function (t) {
+    var pins = TASKS.filter(function (t) { return c === 'all' || t.circle === c; }).map(function (t) {
       var on = S.selected === t.id;
       return '<button type="button" class="pin' + (on ? ' on' : '') + '" style="left:' + t.px + 'px;top:' + t.py + 'px" data-action="pin" data-value="' + t.id + '" aria-label="' + t.title + ', $' + t.pay + '">$' + t.pay + '</button>';
     }).join('');
     var filters = [['walk', 'Walkable'], ['weekend', 'This weekend'], ['pay', '$30+'], ['all', 'All']];
-    var heading = f === 'walk' ? list.length + ' jobs in walking distance' : f === 'weekend' ? list.length + ' jobs this weekend' : f === 'pay' ? list.length + ' jobs paying $30+' : list.length + ' jobs near you';
+    var circles = [['all', 'All circles']].concat(CIRCLES.map(function (x) { return [x.id, x.name]; }));
+    var where = c === 'all' ? 'in your circles' : 'in ' + circleOf(c).name;
+    var heading = (f === 'walk' ? list.length + ' walkable jobs ' : f === 'weekend' ? list.length + ' weekend jobs ' : f === 'pay' ? list.length + ' jobs paying $30+ ' : list.length + ' jobs ') + where;
     return '<div class="screen">' + mapLines(pins) +
-      '<div style="position:relative;padding:24px 20px;display:flex;align-items:center;justify-content:space-between"><div class="pill-glass" style="font-size:15px;font-weight:800;padding:10px 16px">hustl ✦</div>' + parentPill() + '</div>' +
+      '<div style="position:relative;padding:24px 20px;display:flex;align-items:center;justify-content:space-between"><div class="pill-glass" style="font-size:15px;font-weight:800;padding:10px 16px">hustl \u2726</div><a href="#/circles" class="pill-glass" style="color:inherit">' + ico('shield', 14, 'color:#047857') + '2 circles \u00b7 10 adults</a></div>' +
       '<div class="sheet' + (S.view === 'list' ? ' full' : '') + '"><div class="handle"></div>' +
-      '<div style="display:flex;justify-content:space-between;align-items:baseline"><div class="h" style="font-size:18px">' + heading + '</div><button type="button" class="sec" style="border:0;background:none;font-size:12px;font-weight:700;cursor:pointer;padding:6px 0;min-height:32px" data-action="view">' + (S.view === 'map' ? 'Map ↔ List' : 'List ↔ Map') + '</button></div>' +
-      '<div class="hscroll" style="margin-top:12px">' + filters.map(function (x) { return '<button type="button" class="pill' + (x[0] === f ? ' on' : '') + '" data-action="filter" data-value="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>' +
+      '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><div class="h" style="font-size:17px;line-height:1.2">' + heading + '</div><button type="button" class="sec" style="border:0;background:none;font-size:12px;font-weight:700;cursor:pointer;padding:6px 0;min-height:32px;white-space:nowrap" data-action="view">' + (S.view === 'map' ? 'Map \u2194 List' : 'List \u2194 Map') + '</button></div>' +
+      '<div class="hscroll" style="margin-top:12px">' + circles.map(function (x) { return '<button type="button" class="pill' + (x[0] === c ? ' on' : '') + '" style="' + (x[0] === c ? '' : 'background:#D6F2E7;color:#0B4A33') + '" data-action="circle" data-value="' + x[0] + '">' + (x[0] === 'all' ? '' : ico('shield', 13)) + x[1] + '</button>'; }).join('') + '</div>' +
+      '<div class="hscroll" style="margin-top:8px">' + filters.map(function (x) { return '<button type="button" class="pill' + (x[0] === f ? ' on' : '') + '" data-action="filter" data-value="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>' +
       '<div style="margin-top:14px;display:flex;flex-direction:column;gap:10px">' + list.map(function (t) { return jobCard(t, S.selected === t.id); }).join('') +
-      (list.length === 0 ? '<div class="dashed">No jobs match yet. Try another filter →</div>' : '') +
-      '<a href="#/browse" class="dashed" data-action="widen">Widen to 5 km →</a></div></div>' + nav('Browse') + '</div>';
+      (list.length === 0 ? '<div class="dashed">No jobs match yet. Try another filter \u2192</div>' : '') +
+      '<div class="dashed" style="cursor:default">Every job here was posted by an adult a parent in your circle invited.</div></div></div>' + nav('Browse') + '</div>';
   };
 
   screens.task = function (id) {
@@ -208,11 +231,12 @@
     return '<div class="screen">' +
       '<div style="position:relative;height:210px;flex-shrink:0;overflow:hidden;border-radius:0 0 28px 28px">' + pinHero + '</div>' +
       '<div class="scroll" style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:14px">' +
-      '<div><div style="display:flex;gap:8px;margin-bottom:8px">' + t.chips.map(function (c) { return '<span class="tag tag-' + c[1] + '">' + c[0] + '</span>'; }).join('') + '</div>' +
+      '<div><div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap"><span class="tag tag-lav">' + CAT[t.cat].label + '</span><span class="tag tag-mint">' + ico('shield', 11) + circleOf(t.circle).name + '</span><span class="tag tag-peach">' + t.chips[1][0] + '</span></div>' +
       '<h1 class="h" style="margin:0;font-size:24px;line-height:1.15">' + t.title + '</h1><div class="sec" style="font-size:13px;margin-top:4px">' + t.longWhen + ' · ' + t.dur + ' · ' + t.rate + '</div></div>' +
-      '<div class="glass" style="padding:14px;display:flex;align-items:center;gap:12px"><div class="avatar" style="width:46px;height:46px;background:' + t.tint + ';font-size:13px">' + t.init + '</div><div style="flex:1"><div class="h" style="font-size:14px">' + t.poster + '</div><div class="sec" style="font-size:12px">★ ' + t.rating + ' · ' + t.jobs + ' jobs posted · ID verified</div></div><button type="button" class="vio" style="border:0;background:none;font-size:12px;font-weight:700;cursor:pointer;min-height:44px;padding:0 6px">Chat</button></div>' +
+      '<div class="glass" style="padding:14px;display:flex;align-items:center;gap:12px"><div class="avatar" style="width:46px;height:46px;background:' + t.tint + ';font-size:13px">' + t.init + '</div><div style="flex:1"><div class="h" style="font-size:14px">' + t.poster + ' <span class="sec" style="font-weight:600">· ' + t.rel + '</span></div><div class="sec" style="font-size:12px">★ ' + t.rating + ' · ' + t.jobs + ' jobs posted · ' + circleOf(t.circle).name + '</div></div><button type="button" class="vio" style="border:0;background:none;font-size:12px;font-weight:700;cursor:pointer;min-height:44px;padding:0 6px">Chat</button></div>' +
+      '<div class="mintcard" style="padding:14px;display:flex;gap:12px;align-items:flex-start"><div style="display:flex;flex-shrink:0;margin-top:2px"><div class="avatar" style="width:32px;height:32px;background:#fff;font-size:10px;border:2px solid #047857">' + t.init + '</div><div class="avatar" style="width:32px;height:32px;background:#B9F5D8;font-size:10px;border:2px solid #047857;margin-left:-8px">KL</div></div><div style="flex:1;font-size:12px;line-height:1.5"><strong>In your circle.</strong> ' + t.poster.split(' ')[0] + ' ' + (t.invitedBy === 'started the circle' ? 'started ' + circleOf(t.circle).name : 'was invited into ' + circleOf(t.circle).name + ' by ' + t.invitedBy) + ' in ' + t.joined + '. Only adults a parent vouches for can post here.</div></div>' +
       '<div class="glass" style="padding:14px"><div class="h" style="font-size:13px;margin-bottom:8px">What you’ll do</div><div class="body" style="font-size:13px;line-height:1.6">' + t.desc + '</div></div>' +
-      '<div class="mintcard" style="padding:14px;display:flex;gap:12px;align-items:center"><div class="avatar" style="width:40px;height:40px;border:3px solid #047857;color:#047857;font-size:11px">M</div><div style="flex:1;font-size:12px;line-height:1.5"><strong>Offer sends Mum a ping.</strong> Job starts once she taps approve, usually under 5 min.</div></div>' +
+      '<div class="mintcard" style="padding:14px;display:flex;gap:12px;align-items:center"><div class="avatar" style="width:40px;height:40px;border:3px solid #047857;color:#047857;font-size:11px">M</div><div style="flex:1;font-size:12px;line-height:1.5"><strong>Offer sends Mum a ping.</strong> She approves from her circle screen, usually under 5 min.</div></div>' +
       '<div class="glass" style="padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:12px;line-height:1.5" ><span class="sec">' + ico('eye', 18, 'color:#047857') + '</span><span class="body">Exact address is shared with you and Mum after approval. Live location is on while you’re there.</span></div></div>' +
       '<div style="padding:12px 20px 24px;display:flex;gap:10px;flex-shrink:0"><button type="button" class="btn-glass" style="flex:1" data-action="saveJob" data-value="' + t.id + '">' + (S.saved[t.id] ? ico('heart', 18, 'fill:#6D28D9;color:#6D28D9') + 'Saved' : 'Save') + '</button>' + cta + '</div>' + sheet + '</div>';
   };
@@ -280,7 +304,8 @@
       '<div style="display:flex;gap:10px;margin-top:18px"><div class="glass stat"><div class="n">12</div><div class="l">jobs done</div></div><div class="glass stat"><div class="n">4.9★</div><div class="l">rating</div></div><div class="glass stat"><div class="n vio">$385</div><div class="l">earned</div></div></div>' +
       '<div class="h" style="font-size:15px;margin-top:18px">Good at</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">' + chip('car', 'Car washing') + chip('paw', 'Dog walking') + chip('leaf', 'Gardens') + chip('phone', 'Tech help') + '</div>' +
       '<div class="h" style="font-size:15px;margin-top:18px">What neighbours say</div><div style="margin-top:10px;display:flex;flex-direction:column;gap:10px">' + quote('Both cars spotless, and she was 10 minutes early. Booking again.', 'Jenny M. · Car wash') + quote('Biscuit loves her. Sends photos from the walk every time.', 'Sam K. · Dog walking') + quote('Straight lines, tidy edges, polite. Recommend.', 'Raj P. · Lawn') + '</div>' +
-      '<div class="hero" style="border-radius:22px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-top:18px;box-shadow:var(--sh-cta)"><div class="avatar" style="width:40px;height:40px;background:#B9F5D8;color:#0B4A33;font-size:12px">K</div><div style="flex:1;font-size:12px;line-height:1.5;opacity:.9">Guardian: <strong>Kate Lawson</strong> · verified · sees all bookings</div><button type="button" style="border:0;background:none;color:#B9F5D8;font-size:12px;font-weight:700;cursor:pointer;min-height:44px">Manage</button></div>' +
+      '<div class="h" style="font-size:15px;margin-top:18px">Your circles</div><div style="margin-top:10px;display:flex;flex-direction:column;gap:10px">' + CIRCLES.map(function (x) { return '<a href="#/circles" class="glass" style="padding:14px;display:flex;align-items:center;gap:12px;color:inherit"><div class="tile" style="width:44px;height:44px;background:#D6F2E7">' + ico('shield', 22, 'color:#047857') + '</div><div style="flex:1"><div class="h" style="font-size:14px">' + x.name + '</div><div class="sec" style="font-size:12px">' + x.families + ' families · ' + x.kids + ' kids · started by ' + x.admin + '</div></div>' + ico('chev', 20, 'color:#5C5680') + '</a>'; }).join('') + '</div>' +
+      '<div class="hero" style="border-radius:22px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-top:12px;box-shadow:var(--sh-cta)"><div class="avatar" style="width:40px;height:40px;background:#B9F5D8;color:#0B4A33;font-size:12px">K</div><div style="flex:1;font-size:12px;line-height:1.5;opacity:.9">Guardian: <strong>Kate Lawson</strong> · runs Curl Curl Crew · approves every booking</div><button type="button" style="border:0;background:none;color:#B9F5D8;font-size:12px;font-weight:700;cursor:pointer;min-height:44px">Manage</button></div>' +
       '</div>' + nav('Profile') + '</div>';
   };
 
@@ -306,7 +331,7 @@
   screens.post = function () {
     var top = '<div class="topbar"><a href="#/" class="iconbtn" aria-label="Back">' + ico('back', 20) + '</a><div class="h">Post a job</div>' + parentPillPoster() + '</div>';
     if (S.posted) {
-      return '<div class="screen">' + top + '<div class="scroll" style="padding:40px 24px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px"><div class="bigdisc pop" style="background:#B9F5D8;margin-top:20px">' + ico('check', 54, 'stroke-width:3;color:#0B4A33') + '</div><div class="h" style="font-size:28px;line-height:1.1">Job posted</div><p class="sec" style="margin:0;font-size:13px;line-height:1.55">We’ve pinged rated teens within 5 km of Collaroy. Most jobs get a first offer within the hour.</p>' +
+      return '<div class="screen">' + top + '<div class="scroll" style="padding:40px 24px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px"><div class="bigdisc pop" style="background:#B9F5D8;margin-top:20px">' + ico('check', 54, 'stroke-width:3;color:#0B4A33') + '</div><div class="h" style="font-size:28px;line-height:1.1">Job posted</div><p class="sec" style="margin:0;font-size:13px;line-height:1.55">Teens in your chosen circles can see it now, and their parents got a heads-up. Most jobs get a first offer within the hour.</p>' +
         '<div class="glass" style="width:100%;padding:14px;display:flex;gap:12px;align-items:center;text-align:left">' + tile(S.postCat, 46, 22) + '<div style="flex:1"><div class="h" style="font-size:14px">Wash and vacuum two cars</div><div class="sec" style="font-size:12px">Sat 20 Sep · 10:00am · Collaroy</div></div><div class="h vio" style="font-size:18px">$' + S.pay + '</div></div></div>' +
         '<div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:10px"><a href="#/applicants" class="btn-ink">See who’s offered (3)</a><button type="button" class="btn-glass" data-action="editPost">Edit the job</button></div></div>';
     }
@@ -315,7 +340,8 @@
     function chk(label) { return '<label class="row" style="min-height:50px;cursor:pointer"><input class="check" type="checkbox" checked><span style="font-size:13px;font-weight:600">' + label + '</span></label>'; }
     return '<div class="screen">' + top +
       '<div class="scroll" style="padding:4px 20px 20px;display:flex;flex-direction:column;gap:16px">' +
-      '<div class="mintcard" style="padding:14px;display:flex;gap:10px;font-size:12px;line-height:1.5">' + ico('shield', 20, 'color:#047857;flex-shrink:0') + '<div>Jobs go to local teens aged 13 to 17. Their parent approves every booking. Keep it simple, safe and in daylight.</div></div>' +
+      '<div><span class="label">Who can see this job</span><div style="display:flex;flex-wrap:wrap;gap:8px">' + CIRCLES.map(function (x) { var on = !!S.postCircles[x.id]; return '<button type="button" class="pill' + (on ? ' on' : '') + '" style="' + (on ? '' : 'background:rgba(255,255,255,.88)') + '" data-action="postCircle" data-value="' + x.id + '">' + ico('shield', 13) + x.name + ' · ' + x.kids + ' kids</button>'; }).join('') + '</div><div class="sec" style="font-size:12px;margin-top:6px">Only teens whose parents are in these circles will see it. There is no public listing.</div></div>' +
+      '<div class="mintcard" style="padding:14px;display:flex;gap:10px;font-size:12px;line-height:1.5">' + ico('shield', 20, 'color:#047857;flex-shrink:0') + '<div>You’re posting to families who know you. Each teen’s parent still approves the booking. Keep it simple, safe and in daylight.</div></div>' +
       '<div><span class="label">What kind of job?</span><div style="display:flex;flex-wrap:wrap;gap:8px">' + Object.keys(CAT).map(function (k) { return '<button type="button" class="pill' + (k === S.postCat ? ' on' : '') + '" style="' + (k === S.postCat ? '' : 'background:rgba(255,255,255,.88)') + '" data-action="postCat" data-value="' + k + '">' + CAT[k].label + '</button>'; }).join('') + '</div></div>' +
       '<div><label class="label" for="jt">Job title</label><input id="jt" class="input" type="text" value="Wash and vacuum two cars"></div>' +
       '<div><span class="label">Pay</span><div style="display:flex;align-items:center;gap:10px"><button type="button" class="iconbtn" style="width:52px;height:52px;border-radius:16px" aria-label="Less pay" data-action="pay" data-value="-5">' + ico('minus', 22) + '</button><div class="glass" style="flex:1;min-height:52px;display:flex;align-items:center;justify-content:center"><span class="h vio" style="font-size:26px">$' + pay + '</span></div><button type="button" class="iconbtn" style="width:52px;height:52px;border-radius:16px" aria-label="More pay" data-action="pay" data-value="5">' + ico('plus', 22) + '</button></div><div class="sec" style="font-size:12px;margin-top:6px">' + hint + '</div></div>' +
@@ -326,7 +352,7 @@
       '<div class="sec" style="font-size:12px;line-height:1.5">Pay is held by Hustl when you book someone and released when the teen checks out. A 10% service fee is added at booking.</div></div>' +
       '<div style="padding:12px 20px 24px"><button type="button" class="btn-ink" data-action="post">Post job · $' + pay + '</button></div></div>';
   };
-  function parentPillPoster() { return '<span class="tag tag-mint">ID verified ✓</span>'; }
+  function parentPillPoster() { return '<a href="#/parent" class="tag tag-mint">' + ico('shield', 11) + 'Curl Curl Crew</a>'; }
 
   screens.applicants = function () {
     var top = '<div class="topbar"><a href="#/post" class="iconbtn" aria-label="Back">' + ico('back', 20) + '</a><div class="h">Offers</div></div>';
@@ -336,17 +362,57 @@
       var fee = Math.round(S.pay * 1.1);
       return '<div class="screen">' + top + head + '<div class="scroll" style="padding:24px 24px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">' +
         '<div class="ring pop" style="margin-top:10px"><div class="arc"></div><div class="disc" style="background:' + sel.tint + '">' + sel.init + '</div><div class="badge">' + ico('check', 12, 'stroke-width:3') + '</div></div>' +
-        '<div class="h" style="font-size:28px;line-height:1.1">' + sel.first + ' is booked in</div><p class="sec" style="margin:0;font-size:13px;line-height:1.55">' + sel.first + '’s parent got the ping and approved. $' + fee + ' ($' + S.pay + ' plus fee) is held until ' + sel.first + ' checks out.</p>' +
+        '<div class="h" style="font-size:28px;line-height:1.1">' + sel.first + ' is booked in</div><p class="sec" style="margin:0;font-size:13px;line-height:1.55">' + sel.first + '’s parent, someone in your circle, got the ping and approved. $' + fee + ' ($' + S.pay + ' plus fee) is held until ' + sel.first + ' checks out.</p>' +
         '<div class="glass" style="width:100%;padding:4px 16px;text-align:left"><div class="row" style="min-height:50px">' + ico('check', 18, 'color:#047857') + '<span style="font-size:13px;font-weight:600">Sat 20 Sep, 10:00am confirmed</span></div><div class="row" style="min-height:50px;border-top:1.5px solid rgba(42,36,64,.1)">' + ico('lock', 18, 'color:#047857') + '<span style="font-size:13px;font-weight:600">Payment held by Hustl</span></div><div class="row" style="min-height:50px;border-top:1.5px solid rgba(42,36,64,.1)">' + ico('star', 18, 'color:#6D28D9') + '<span style="font-size:13px;font-weight:600">You both rate each other after</span></div></div></div>' +
         '<div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:10px"><button type="button" class="btn-ink">' + ico('chat', 18) + 'Message ' + sel.first + '</button><button type="button" class="btn-glass" data-action="unchoose">Choose someone else</button></div></div>';
     }
     return '<div class="screen">' + top + head + '<div class="scroll" style="padding:4px 20px 20px;display:flex;flex-direction:column;gap:10px"><div class="h" style="font-size:15px">3 teens offered to help</div>' +
       PEOPLE.map(function (p) {
         return '<div class="glass" style="padding:14px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:12px;align-items:center"><div class="avatar" style="width:46px;height:46px;background:' + p.tint + ';font-size:13px">' + p.init + '</div><div style="flex:1"><div class="h" style="font-size:14px">' + p.name + '</div><div class="sec" style="font-size:12px">' + p.meta + '</div></div><div class="h" style="font-size:13px">★ ' + p.rating + '</div></div>' +
-          '<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-mint">Parent linked ✓</span><span class="tag ' + p.cls + '">' + p.badge + '</span></div>' +
+          '<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-mint">' + ico('shield', 11) + 'In your circle</span><span class="tag ' + p.cls + '">' + p.badge + '</span></div>' +
           '<div class="quote">“' + p.msg + '”</div>' +
           '<div style="display:flex;gap:8px"><button type="button" class="btn-glass" style="flex:0 0 52px;min-height:48px;padding:0;width:auto" aria-label="Message ' + p.name + '">' + ico('chat', 20) + '</button><button type="button" class="btn-ink" style="flex:1;min-height:48px;width:auto;box-shadow:none" data-action="choose" data-value="' + p.id + '">Choose ' + p.first + '</button></div></div>';
       }).join('') + '</div></div>';
+  };
+
+  screens.circles = function () {
+    var cards = CIRCLES.map(function (x) {
+      return '<div class="glass" style="border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">' +
+        '<div style="display:flex;align-items:center;gap:12px"><div class="tile" style="width:46px;height:46px;background:#D6F2E7">' + ico('shield', 22, 'color:#047857') + '</div><div style="flex:1"><div class="h" style="font-size:15px">' + x.name + '</div><div class="sec" style="font-size:12px">' + x.families + ' families · ' + x.kids + ' kids · since ' + x.since + '</div></div></div>' +
+        '<div class="sec" style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">Adults who can post to you</div>' +
+        '<div style="display:flex;flex-direction:column;gap:8px">' + x.members.map(function (m) { return '<div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:34px;height:34px;background:' + m.tint + ';font-size:11px">' + m.init + '</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px">' + m.name + ' <span class="sec" style="font-weight:600">· ' + m.rel + '</span></div><div class="sec" style="font-size:11px">' + m.role + '</div></div>' + (m.rel === 'Your mum' ? '<span class="tag tag-mint">Mum</span>' : '') + '</div>'; }).join('') + '</div>' +
+        '<div class="sec" style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:2px">Teens in this circle</div><div class="body" style="font-size:12px;line-height:1.5">' + x.teens.join(', ') + ' and ' + (x.kids - x.teens.length) + ' more</div></div>';
+    }).join('');
+    return '<div class="screen"><div class="scroll navpad" style="padding:26px 20px 96px;display:flex;flex-direction:column;gap:12px">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center"><div class="h" style="font-size:22px">Your circles</div>' + parentPill() + '</div>' +
+      '<div class="mintcard" style="padding:14px;font-size:12px;line-height:1.5"><strong>Why you only see these people.</strong> A circle is a group of parents who know each other. Your mum is in two. Only adults inside them can post jobs to you, and every one of them was invited by a parent who vouches for them.</div>' +
+      cards +
+      '<div class="dashed" style="cursor:default">Know a family who should be in? Ask Mum to invite them from her circle screen.</div>' +
+      '</div>' + nav('Profile') + '</div>';
+  };
+
+  screens.parent = function () {
+    var x = CIRCLES[0];
+    var pendingOffers = TASKS.filter(function (t) { return S.applied[t.id] && !approved(t.id); });
+    var req = S.requests.ben;
+    var needs = '';
+    if (req !== 'ok' && req !== 'no') needs += '<div class="glass" style="padding:14px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:40px;height:40px;background:#EDE9FE;font-size:12px">BT</div><div style="flex:1"><div class="h" style="font-size:14px">Ben T. wants to join</div><div class="sec" style="font-size:12px">Oscar’s dad · invited by Jenny M. · lives on Pitt Rd</div></div></div><div style="display:flex;gap:8px"><button type="button" class="btn-glass" style="min-height:44px;font-size:13px" data-action="request" data-value="no">Not now</button><button type="button" class="btn-ink" style="min-height:44px;font-size:13px;box-shadow:none" data-action="request" data-value="ok">Let Ben in</button></div></div>';
+    pendingOffers.forEach(function (t) {
+      needs += '<div class="glass" style="padding:14px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;gap:10px">' + tile(t.cat, 40, 18) + '<div style="flex:1"><div class="h" style="font-size:14px">Zoe offered to help ' + t.poster.split(' ')[0] + '</div><div class="sec" style="font-size:12px">' + t.title + ' · ' + t.longWhen + ' · $' + t.pay + ' · ' + t.rel + '</div></div></div><div style="display:flex;gap:8px"><a href="#/task/' + t.id + '" class="btn-glass" style="min-height:44px;font-size:13px">See the job</a><button type="button" class="btn-ink" style="min-height:44px;font-size:13px;box-shadow:none" data-action="approveOffer" data-value="' + t.id + '">Approve ✓</button></div></div>';
+    });
+    if (!needs) needs = '<div class="dashed" style="cursor:default">Nothing waiting on you. Zoe’s next offer will show up here.</div>';
+    var members = x.members.map(function (m) { return '<div class="list-row" style="min-height:52px"><div style="display:flex;align-items:center;gap:10px;min-width:0"><div class="avatar" style="width:34px;height:34px;background:' + m.tint + ';font-size:11px">' + m.init + '</div><div style="min-width:0"><div style="font-weight:700;font-size:13px">' + m.name + (m.rel === 'Your mum' ? ' (you)' : '') + '</div><div class="sec" style="font-size:11px">' + (m.rel === 'Your mum' ? 'Zoe’s mum' : m.rel) + ' · ' + m.role + '</div></div></div>' + (m.role === 'Started the circle' ? '<span class="tag tag-lav">Admin</span>' : '') + '</div>'; }).join('');
+    if (req === 'ok') members += '<div class="list-row" style="min-height:52px"><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:34px;height:34px;background:#EDE9FE;font-size:11px">BT</div><div><div style="font-weight:700;font-size:13px">Ben T.</div><div class="sec" style="font-size:11px">Oscar’s dad · Invited by Jenny · joined just now</div></div></div><span class="tag tag-mint">New</span></div>';
+    return '<div class="screen"><div class="topbar"><a href="#/" class="iconbtn" aria-label="Back">' + ico('back', 20) + '</a><div class="h">Your circle</div><span class="tag tag-lav">You run it</span></div>' +
+      '<div class="scroll" style="padding:4px 20px 24px;display:flex;flex-direction:column;gap:12px">' +
+      '<div class="hero" style="padding:18px"><div class="blob"></div><div style="display:flex;justify-content:space-between;align-items:flex-start"><span class="tag tag-mint2">' + ico('shield', 11) + 'Parent circle</span><span style="font-size:12px;opacity:.75">since ' + x.since + '</span></div><div class="h" style="font-size:22px;margin-top:10px">' + x.name + '</div><div style="font-size:12px;opacity:.75;margin-top:3px">' + x.families + ' families · ' + x.kids + ' kids · 5 adults who post jobs</div>' +
+      '<div style="display:flex;gap:8px;margin-top:14px"><div class="btn-dim" style="cursor:default;flex-direction:column;gap:2px;line-height:1.2"><span style="font-size:10px;opacity:.7">Invite code</span><span style="font-size:15px;font-weight:800;letter-spacing:.08em">' + x.code + '</span></div><button type="button" class="btn-mint" data-action="copy">' + (S.copied ? 'Link copied ✓' : 'Share invite link') + '</button></div></div>' +
+      '<div class="mintcard" style="padding:12px 14px;font-size:12px;line-height:1.5">Only invite parents you actually know. Anyone you let in can post jobs that every teen in the circle will see, and they can see your kids’ first names and ratings.</div>' +
+      '<div class="h" style="font-size:15px;margin-top:4px">Needs your OK</div>' + needs +
+      '<div class="h" style="font-size:15px;margin-top:4px">Parents and adults in the circle</div><div class="glass" style="padding:4px 14px">' + members + '</div>' +
+      '<div class="h" style="font-size:15px;margin-top:4px">Teens</div><div class="glass" style="padding:14px;font-size:13px;line-height:1.6">' + x.teens.map(function (t) { return t.replace(' (you)', ' (yours)'); }).join(', ') + ' and 4 more. Each was linked by their own parent.</div>' +
+      '<a href="#/post" class="btn-ink" style="margin-top:4px">' + ico('plus', 18) + 'Post a job to the circle</a>' +
+      '<a href="#/circles" class="btn-glass">See it as Zoe sees it</a></div></div>';
   };
 
   // ---------- Actions ----------
@@ -354,6 +420,11 @@
     age: function (v) { set({ age: +v }); },
     step: function (v) { set({ step: +v }); },
     filter: function (v) { set({ filter: v, selected: null }); },
+    circle: function (v) { set({ circle: v, filter: 'all', selected: null }); },
+    postCircle: function (v) { S.postCircles[v] = !S.postCircles[v]; if (!S.postCircles.curl && !S.postCircles.y10) S.postCircles[v] = true; save(); render(); },
+    approveOffer: function (v) { S.approvedBy[+v] = true; save(); render(); },
+    request: function (v) { S.requests.ben = v; save(); render(); },
+    copy: function () { set({ copied: true }); },
     view: function () { set({ view: S.view === 'map' ? 'list' : 'map' }); },
     widen: function (v, el, ev) { ev.preventDefault(); set({ filter: 'all' }); },
     pin: function (v) {
